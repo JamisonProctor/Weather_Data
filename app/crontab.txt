@@ -1,0 +1,2 @@
+MAILTO=""
+0 * * * * /usr/bin/python3 /code/main.py

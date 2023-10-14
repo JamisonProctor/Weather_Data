@@ -1,0 +1,30 @@
+
+# Command to run container
+
+
+docker build -t weather_cal . && docker run -itd --rm --name weather_cal --restart unless-stopped --volume weather_cal:/code/data weather_cal bash && docker exec -it weather_cal bash
+
+
+docker build -t weather_cal .
+
+docker run -itd --rm --name weather_cal --volume weather_cal:/code/data weather_cal bash
+# docker run -itd --name weather_cal --restart unless-stopped --volume weather_cal:/code/data weather_cal bash
+
+
+docker exec -it weather_cal bash
+
+
+
+docker stop weather_cal && docker image rm weather_cal:latest && docker volume rm weather_cal 
+
+
+docker stop weather_cal 
+
+docker image rm weather_cal:latest 
+
+docker volume rm weather_cal 
+
+
+
+
+sudo chmod 777 weather_cal/
